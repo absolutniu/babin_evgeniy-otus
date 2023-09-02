@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const getPath  = require('./getPath');
+const getPath  = require('../Javascript/getPath')
 
 
 describe("getPath", () => {

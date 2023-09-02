@@ -1,4 +1,4 @@
-export function getPath(el) {
+function getPath(el) {
    let element = el;
    let ouputArr = [];
    while (element.localName != "body") {
@@ -25,3 +25,4 @@ export function getPath(el) {
    ouputArr.unshift("body");
    return ouputArr.join(" ");
 }
+module.exports = getPath; 
