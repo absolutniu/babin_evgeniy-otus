@@ -1,7 +1,8 @@
 function getPath(el) {
    let element = el;
-   let ouputArr = [];
-   while (element.localName != "body") {
+   let outputArr = [];
+   let ouputPath = "";
+   while (element.localName !== "body") {
       if (element.localName == "li") {
          let i = 1;
          let elWhile = element;
@@ -10,19 +11,21 @@ function getPath(el) {
             elWhile = elWhile.previousElementSibling;
             i++;
          }
-         ouputArr.unshift("li:nth-child(" + i + ")");
+         outputArr.unshift("li:nth-child(" + i + ")");
       } else {
          if (element.hasAttribute("class")) {
-            ouputArr.unshift(
+            outputArr.unshift(
                `${element.localName}.${element.getAttribute("class")}`
             );
          } else {
-            ouputArr.unshift(element.localName);
+            outputArr.unshift(element.localName);
          }
       }
       element = element.parentElement;
    }
-   ouputArr.unshift("body");
-   return ouputArr.join(" ");
+   outputArr.unshift("body");
+   ouputPath = outputArr.join(">");
+   if(document.querySelectorAll(ouputPath).length>1) ouputPath  += ':first-of-type';
+   return ouputPath;
 }
 module.exports = getPath; 
