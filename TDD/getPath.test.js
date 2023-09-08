@@ -9,16 +9,17 @@ describe("getPath", () => {
     beforeEach(() => {
     
     document.body.innerHTML =`
-     
-         <div class="some" id="333">
-             <p>
-                 <ul id="55">
-                     <li>Этот</li>
-                     <li id="someId">тест</li>
-                     <li id="123">тест</li>
-                 </ul>
-             </p>
-         </div>`
+    <div class="some" id="333">
+    <p>
+    <ul id="55">
+    <li>Этот</li>
+    <li id="someId">тест</li>
+    <li class="tester">
+        <div class="test">1</div><div class="test">2</div></li>
+    <li id="123">тест</li>
+    </ul>
+    </p>
+    </div>`
    });
  
     test("findEl", () => {
