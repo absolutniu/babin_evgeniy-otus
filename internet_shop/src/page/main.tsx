@@ -18,7 +18,7 @@ function Main() {
 			<div className="pt-32">
 				<CarouselCard label="Покупали раньше" hrefLabel="Все покупки" count={4} value={[]} />
 			</div>
-			<div>
+			{/* <div>
 				<div>Специальное предложение хедер</div>
 				<div>
 					<div>Покупали раньше Карусель</div>
@@ -35,7 +35,7 @@ function Main() {
 					<div>карта</div>
 					<div>карта</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }

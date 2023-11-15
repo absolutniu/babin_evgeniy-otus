@@ -19,16 +19,17 @@ export function Favorite() {
 		data: queryProducts,
 		isFetching: isFetchingProducts,
 		isSuccess: isSuccessProducts
-	} = useGetFavoriteProductsQuery(buildURL)
+	} = useGetFavoriteProductsQuery(buildURL, { skip: !favorite.length })
 	useEffect(() => {
 		if (favoriteSuccess) {
 			setFavorite(productsId)
 		}
+	}, [isQuery])
+	useEffect(() => {
 		if (isSuccessProducts) {
 			setProducts(queryProducts)
 		}
-	}, [isQuery, isFetchingProducts])
-
+	}, [isFetchingProducts, queryProducts])
 	return (
 		<div
 			style={{
