@@ -1,0 +1,239 @@
+{
+  "ratings": [
+    {
+      "id": "124d7a4",
+      "productId": "65247a15a3aeb5f3645c2544",
+      "totalVote": 30,
+      "rating": 3.5
+    },
+    {
+      "id": "124d7a5",
+      "productId": "65247a1553f98048592a9bb9",
+      "totalVote": 70,
+      "rating": 4
+    },
+    {
+      "id": "124d7a3",
+      "productId": "65247a15e5a5575ee9a88500",
+      "totalVote": 78,
+      "rating": 3.948717948717949
+    },
+    {
+      "id": "124d7a2",
+      "productId": "65247a159c497446f99943a3",
+      "totalVote": 6,
+      "rating": 3.8333333333333335
+    },
+    {
+      "id": "124d7a1",
+      "productId": "65247a152d5f06ab61beae9f",
+      "totalVote": 3,
+      "rating": 3.3333333333333335
+    },
+    {
+      "id": "124d7a",
+      "productId": "65247a15f4e80a38d31b6d0e",
+      "totalVote": 1,
+      "rating": 4
+    },
+    {
+      "id": "124dsa",
+      "productId": "65247a15c42649f6fcd32e11",
+      "totalVote": 2,
+      "rating": 2
+    }
+  ],
+  "products": [
+    {
+      "image": "",
+      "name": "Page",
+      "category": "Milk",
+      "price": {
+        "productId": "65247a1553f98048592a9bb9",
+        "price": 3334,
+        "discount": 78
+      },
+      "id": "65247a1553f98048592a9bb9"
+    },
+    {
+      "image": "",
+      "name": "Farrell",
+      "category": "Milk",
+      "price": {
+        "productId": "65247a15a3aeb5f3645c2544",
+        "price": 8868,
+        "discount": 37
+      },
+      "id": "65247a15a3aeb5f3645c2544"
+    },
+    {
+      "id": "65247a15e5a5575ee9a88500",
+      "image": "",
+      "name": "Holloway",
+      "category": "FastFood",
+      "price": {
+        "productId": 2,
+        "price": 5128,
+        "discount": 17
+      }
+    },
+    {
+      "id": "65247a159c497446f99943a3",
+      "image": "",
+      "name": "Wolf",
+      "category": "FastFood",
+      "price": {
+        "productId": "65247a159c497446f99943a3",
+        "price": 1144
+      }
+    },
+    {
+      "id": "65247a152d5f06ab61beae9f",
+      "image": "",
+      "name": "Barton",
+      "category": "FastFood",
+      "price": {
+        "productId": "65247a152d5f06ab61beae9f",
+        "price": 5901,
+        "discount": 20
+      }
+    },
+    {
+      "id": "65247a15f4e80a38d31b6d0e",
+      "image": "",
+      "category": "Vegetables",
+      "name": "Diaz",
+      "price": {
+        "productId": "65247a15f4e80a38d31b6d0e",
+        "price": 7583,
+        "discount": 38
+      }
+    },
+    {
+      "id": "65247a15c42649f6fcd32e11",
+      "image": "",
+      "category": "Vegetables",
+      "name": "Landry",
+      "price": {
+        "productId": "65247a15c42649f6fcd32e11",
+        "price": 4754,
+        "discount": 47
+      }
+    }
+  ],
+  "favorites": [
+    {
+      "id": "65247a15c42649ertf",
+      "userId": "65247a15c42649f6fcd32e1",
+      "productId": "65247a1553f98048592a9bb9",
+      "isFavorite": true
+    },
+    {
+      "id": "65247a15c42649ef",
+      "userId": "65247a15c42649f6fcd32e1",
+      "productId": "65247a159c497446f99943a3",
+      "isFavorite": false
+    },
+    {
+      "productId": "65247a15a3aeb5f3645c2544",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isFavorite": true,
+      "id": "EHrfHNG"
+    },
+    {
+      "productId": "65247a15e5a5575ee9a88500",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isFavorite": true,
+      "id": "efc3Pf0"
+    },
+    {
+      "productId": "65247a15f4e80a38d31b6d0e",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isFavorite": true,
+      "id": "tkmY6_r"
+    },
+    {
+      "productId": "65247a15c42649f6fcd32e11",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isFavorite": true,
+      "id": "Z9S_-Ql"
+    }
+  ],
+  "carts": [
+    {
+      "id": "65247a15c42649f",
+      "userId": "65247a15c42649f6fcd32e1",
+      "productId": "65247a159c497446f99943a3",
+      "isCarts": true,
+      "count": 0
+    },
+    {
+      "id": "65247a15c42649",
+      "userId": "65247a15c42649f6fcd32e1",
+      "productId": "65247a1553f98048592a9bb9",
+      "isCarts": true,
+      "count": 0
+    },
+    {
+      "productId": "65247a15e5a5575ee9a88500",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isCarts": true,
+      "id": "tZj8IQk",
+      "count": 0
+    },
+    {
+      "productId": "65247a15a3aeb5f3645c2544",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isCarts": true,
+      "id": "9s5vFXf",
+      "count": 0
+    },
+    {
+      "productId": "65247a152d5f06ab61beae9f",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isCarts": false,
+      "id": "wzPG5Dw",
+      "count": 0
+    },
+    {
+      "productId": "65247a15f4e80a38d31b6d0e",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isCarts": false,
+      "id": "u1TlHOl",
+      "count": 0
+    },
+    {
+      "productId": "65247a15c42649f6fcd32e11",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isCarts": false,
+      "id": "nZk3FwP",
+      "count": 0
+    }
+  ],
+  "categories": [
+    {
+      "id": "65247a2as15f06ab61beae9f",
+      "name": "Milk"
+    },
+    {
+      "id": "65247a2as15f06ab61be1234",
+      "name": "Vegetables"
+    },
+    {
+      "id": "65247a2as15f06ab61be009h",
+      "name": "FastFood"
+    },
+    {
+      "id": "65247330915f06ab61be009h",
+      "name": "FastFood"
+    },
+    {
+      "id": "65247330915f06ab633d009h",
+      "name": "FastFood"
+    },
+    {
+      "id": "65247330915132ab61be009h",
+      "name": "FastFood"
+    }
+  ]
+}
