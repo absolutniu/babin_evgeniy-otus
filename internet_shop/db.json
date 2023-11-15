@@ -126,7 +126,7 @@
       "id": "65247a15c42649ertf",
       "userId": "65247a15c42649f6fcd32e1",
       "productId": "65247a1553f98048592a9bb9",
-      "isFavorite": true
+      "isFavorite": false
     },
     {
       "id": "65247a15c42649ef",
@@ -137,7 +137,7 @@
     {
       "productId": "65247a15a3aeb5f3645c2544",
       "userId": "65247a15c42649f6fcd32e1",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": "EHrfHNG"
     },
     {
@@ -155,8 +155,14 @@
     {
       "productId": "65247a15c42649f6fcd32e11",
       "userId": "65247a15c42649f6fcd32e1",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": "Z9S_-Ql"
+    },
+    {
+      "productId": "65247a152d5f06ab61beae9f",
+      "userId": "65247a15c42649f6fcd32e1",
+      "isFavorite": true,
+      "id": "Z9S_-zz"
     }
   ],
   "carts": [

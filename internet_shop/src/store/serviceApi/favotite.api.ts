@@ -23,7 +23,8 @@ export const serviceApi = api.injectEndpoints({
 					arrOut.push(item.productId)
 				})
 				return arrOut
-			}
+			},
+			providesTags: (result, error, productId) => [{ type: 'favorites', productId }]
 		}),
 		updateFavorites: builder.mutation<void, Pick<IFavorite, 'id'> & Partial<IFavorite>>({
 			query: (favorite: IFavorite) => {
