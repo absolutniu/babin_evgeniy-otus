@@ -6,7 +6,7 @@ function ShareButton({ ...props }) {
 	return (
 		<div>
 			<IconButton>{<ShareIcon />}</IconButton>
-			{props.label && <label className="text-sm text-grey10">Поделиться</label>}
+			{props.label && <label className="text-sm text-grayscale">Поделиться</label>}
 		</div>
 	)
 }

@@ -60,7 +60,7 @@ function Delivery() {
 	}
 
 	return (
-		<Card style={{ height: '626px', width: '1208px' }}>
+		<Card style={{ height: '626px', width: '1208px' }} className="m-auto bg-background">
 			<div className="flex flex-row mb-16">
 				<div className="text-main text-7xl font-bold">Доставка</div>
 			</div>

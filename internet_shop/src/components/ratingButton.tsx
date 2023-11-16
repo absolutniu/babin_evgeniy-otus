@@ -8,12 +8,12 @@ import { useEffect, useState } from 'react'
 
 function FavoriteButton({ ...props }) {
 	const [value, setValue] = useState<IRating>(new CRating())
-	const { data: ratingQuery, isFetching, isSuccess } = useGetRatingByProductIdQuery(props.id)
+	const { data, isSuccess } = useGetRatingByProductIdQuery(props.id, { skip: !props.id.length })
 
 	const [updateRating] = useUpdateRatingMutation()
 	useEffect(() => {
-		if (isSuccess) setValue(ratingQuery)
-	}, [isFetching])
+		if (isSuccess) setValue(data)
+	}, [data])
 
 	const onClickUpdateRating = (NewValue: number | null) => {
 		if (!NewValue) NewValue = Math.round(value.rating)
@@ -24,7 +24,6 @@ function FavoriteButton({ ...props }) {
 			rating: ratingParam,
 			totalVote: totalVote
 		})
-		console.log(value)
 	}
 	const getColor = () => {
 		if (value?.rating <= 2) return 'red'

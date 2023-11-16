@@ -11,7 +11,9 @@ interface IButtonGroupProps {
 const ButtonGroupCustom: FC<IButtonGroupProps> = ({ className, data }) => {
 	const [selectedButton, setSelectedButton] = useState<number | null>(null)
 	const getColor = (index: number, style: string) =>
-		selectedButton === index ? 'bg-secondary text-white ' + style : 'bg-white text-grey10 ' + style
+		selectedButton === index
+			? 'bg-secondary text-white ' + style
+			: 'bg-white text-grayscale ' + style
 	return (
 		<div className={className}>
 			<label className="text-gray">Время</label>
