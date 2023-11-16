@@ -1,4 +1,4 @@
-import { IProduct, IProductCatalog, IProductSearch } from '../../types/product'
+import { IProduct, IProductCatalog, IProductDetail, IProductSearch } from '../../types/product'
 import { api } from '../api'
 
 export const productApi = api.injectEndpoints({
@@ -13,6 +13,10 @@ export const productApi = api.injectEndpoints({
 			}
 		}),
 		getProductById: builder.query<IProduct, string>({
+			query: id => `/products/${id}`,
+			providesTags: (result, error, id) => [{ type: 'products', id }]
+		}),
+		getDetailProductById: builder.query<IProductDetail, string>({
 			query: id => `/products/${id}`,
 			providesTags: (result, error, id) => [{ type: 'products', id }]
 		}),
@@ -67,6 +71,7 @@ export const productApi = api.injectEndpoints({
 export const {
 	useGetProductsQuery,
 	useGetProductByIdQuery,
+	useGetDetailProductByIdQuery,
 	useGetProductsByNameQuery,
 	useGetProductsBySearchQuery,
 	useGetProductsByCategoryQuery,

@@ -5,12 +5,12 @@ import { Button } from '@mui/material'
 
 function CartButton({ ...props }) {
 	const [value, setValue] = useState<ICarts>(new CCartsSelect())
-	const { data, isFetching, isSuccess } = useGetCartByProductIdQuery(props.id)
+	const { data, isSuccess } = useGetCartByProductIdQuery(props.id, { skip: !props.id.length })
 
 	const [updateCarts] = useUpdateCartsMutation()
 	useEffect(() => {
 		if (isSuccess) setValue(data)
-	}, [isFetching])
+	}, [data])
 
 	return (
 		<Button

@@ -8,26 +8,15 @@ import { OutputSearchCard } from './components/outputSearchCard'
 import { useState } from 'react'
 import { Catalog } from './components/catalog'
 import { CarouselCatalogCard } from './components/carouselCatalogCard'
+import DetailCard from './page/detailCard'
 import { Favorite } from './components/favorite'
 import Main from './page/main'
+import Delivery from './page/delivery'
 
 function App() {
 	const [searchValue, setSearchValue] = useState('')
 	const [category, setCategory] = useState<string>('')
 
-	/* const product = {
-		image:
-			'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII',
-		name: 'Page',
-		category: 'Milk',
-		articul: 'арт. 371431',
-		price: {
-			productId: '65247a1553f98048592a9bb9',
-			price: 3334,
-			discount: 78
-		},
-		id: '65247a1553f98048592a9bb9'
-	} */
 	return (
 		<BrowserRouter>
 			<ThemeProvider theme={Theme}>
@@ -40,8 +29,9 @@ function App() {
 						<Route path="/favorite" Component={Favorite} />
 						<Route path="/catalog" element={<Catalog setCategory={setCategory} />} />
 						<Route path="/catalogProducts" element={<CarouselCatalogCard category={category} />} />
+						<Route path="/DetailCard/:id" element={<DetailCard />} />
+						<Route path="/Delivery" element={<Delivery />} />
 					</Routes>
-					{/* <DetailCard product={product} /> */}
 				</div>
 			</ThemeProvider>
 		</BrowserRouter>

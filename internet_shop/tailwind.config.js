@@ -9,8 +9,9 @@ export const theme = {
 		main: '#414141',
 		error: '#D80000',
 		white: '#ffffff',
-		grey10: '#606060',
-		background: '#FBF8EC'
+		grayscale: '#606060',
+		background: '#FBF8EC',
+		grey1: '#BFBFBF'
 	}
 }
 export const plugins = []

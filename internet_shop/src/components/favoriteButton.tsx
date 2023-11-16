@@ -10,15 +10,14 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 
 function FavoriteButton({ ...props }) {
 	const [favorite, setFavorite] = useState<IFavorite>(new CFavorite())
-	const {
-		data: favoriteQuery,
-		isFetching: isFetchingFavorite,
-		isSuccess: isSuccessFavorite
-	} = useGetFavoriteByProductIdQuery(props.id)
+	const { data: favoriteQuery, isSuccess: isSuccessFavorite } = useGetFavoriteByProductIdQuery(
+		props.id,
+		{ skip: !props.id.length }
+	)
 	const [updateFavorites] = useUpdateFavoritesMutation()
 	useEffect(() => {
 		if (isSuccessFavorite) setFavorite(favoriteQuery)
-	}, [isFetchingFavorite])
+	}, [favoriteQuery])
 
 	return (
 		<div>
@@ -31,7 +30,7 @@ function FavoriteButton({ ...props }) {
 			>
 				{favorite?.isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
 			</IconButton>
-			{props.label && <label className="text-sm text-grey10">В избранное</label>}
+			{props.label && <label className="text-sm text-grayscale">В избранное</label>}
 		</div>
 	)
 }

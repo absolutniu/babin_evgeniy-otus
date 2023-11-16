@@ -3,7 +3,7 @@ import { CRating, IRating } from './rating'
 
 export interface IProduct {
 	id: string
-	image: string
+	mainImage: string
 	rating: IRating
 	name: string
 	price: IPrice
@@ -16,11 +16,23 @@ export interface IProductSearch {
 
 export class CProduct {
 	id = ''
-	image = ''
+	image = []
 	rating = new CRating()
 	name = ''
 	price = new CPrice()
+	articul = ''
+	brend = ''
+	mass = ''
+	made = ''
+	mainImage = ''
 }
 export interface IProductCatalog extends IProduct {
 	category: string
+}
+export interface IProductDetail extends IProduct {
+	articul: string
+	brend: string
+	mass: string
+	made: string
+	image: Array<string>
 }

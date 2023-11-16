@@ -30,6 +30,7 @@ export function Favorite() {
 			setProducts(queryProducts)
 		}
 	}, [isFetchingProducts, queryProducts])
+
 	return (
 		<div
 			style={{

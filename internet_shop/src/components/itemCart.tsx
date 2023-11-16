@@ -7,6 +7,7 @@ import logo from './../asset/images/1.png'
 import { useGetProductByIdQuery } from '../store/serviceApi/product.api'
 import { useUpdateCartsMutation } from '../store/serviceApi/cart.api'
 import { CProduct, IProduct } from '../types/product'
+import PriceField from './priceText'
 
 const ItemCart: FC<ICartsDetails> = ({ cart }) => {
 	const [product, setProduct] = useState<IProduct>(new CProduct())
@@ -73,81 +74,16 @@ const ItemCart: FC<ICartsDetails> = ({ cart }) => {
 
 					{!product.price.discount && <label>{product.price.price} ₽ за шт.</label>}
 					{product.price.discount && (
-						<div
-							style={{
-								display: 'flex',
-								flexDirection: 'row',
-								height: '32px'
-							}}
-						>
-							<div
-								style={{
-									paddingRight: '8px',
-									display: 'flex',
-									flexDirection: 'column'
-								}}
-							>
-								<label
-									style={{
-										fontSize: '12px',
-										color: '#606060',
-										fontWeight: 'bold'
-									}}
-								>
-									{priceCard()} ₽
-								</label>
-								<label
-									style={{
-										fontSize: '12px',
-										color: '#BFBFBF',
-										lineHeight: '12px'
-									}}
-								>
-									C картой
-								</label>
-							</div>
-							<div
-								style={{
-									paddingRight: '8px',
-									display: 'flex',
-									flexDirection: 'column',
-									alignItems: 'end'
-								}}
-							>
-								<label
-									style={{
-										fontSize: '12px',
-										color: '#606060'
-									}}
-								>
-									{product.price.price} ₽
-								</label>
-								<label
-									style={{
-										fontSize: '12px',
-										color: '#BFBFBF',
-										lineHeight: '12px'
-									}}
-								>
-									Обычная
-								</label>
-							</div>
-							<label style={{ fontSize: '12px', color: '#606060' }}>за шт.</label>
-							<div
-								style={{
-									backgroundColor: '#FF6633',
-									height: '100%',
-									width: '53px',
-									margin: '4px 8px 4px 8px',
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-									borderRadius: '4px'
-								}}
-							>
-								<label style={{ fontSize: '16px', color: '#FFFFFF' }}>
-									-{product.price.discount} %
-								</label>
+						<div className="flex flex-row h-8">
+							<PriceField
+								product={product}
+								fontSizeDiscount="text-xs"
+								fontSize="text-xs"
+								width="w-28"
+							/>
+							<label className="text-xs text-grayscale pl-1">за шт.</label>
+							<div className="flex bg-primary justify-center h-full w-14 mx-2 rounded items-center">
+								<label className="text-white flex">-{product.price.discount} %</label>
 							</div>
 						</div>
 					)}
@@ -171,14 +107,15 @@ const ItemCart: FC<ICartsDetails> = ({ cart }) => {
 								? updateCarts({ ...cart, counter: cart.counter - 1 })
 								: 1
 						}
-						style={{ height: '24px', width: '24px', color: '#FFFFFF' }}
+						style={{ color: '#FFFFFF' }}
+						className="h-6 w-6"
 					>
 						-
 					</IconButton>
 
 					<label style={{ color: '#FFFFFF' }}>{cart.counter}</label>
 					<IconButton
-						style={{ height: '24px', width: '24px', color: '#FFFFFF' }}
+						style={{ color: '#FFFFFF' }}
 						onClick={() => updateCarts({ ...cart, counter: cart.counter + 1 })}
 					>
 						+
